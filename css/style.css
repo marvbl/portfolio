@@ -1,6 +1,5 @@
-/* Navbar styling */
 .custom-navbar {
-    background-color: rgba(0, 0, 0, 0.511);
+    background-color: rgba(0, 0, 0, 0.6);
     -webkit-backdrop-filter: blur(25px); /* Safari-specific prefix */
     backdrop-filter: blur(35px);
     padding: 8px 0; /* Padding for top/bottom */
@@ -14,7 +13,7 @@
     z-index: 9999; /* High z-index */
     border-radius: 100px; /* Optional: round the corners */
     border: 1px solid rgba(53, 53, 53, 0.5); /* Stroke line around the navbar */
-   box-shadow: 0 -2px 60px 5px rgb(0, 0, 0.4); /* Stronger, higher shadow */
+   box-shadow: 0 -4px 60px 5px rgb(0, 0, 0.7); /* Stronger, higher shadow */
 }
 
 
