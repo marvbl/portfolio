@@ -1,15 +1,20 @@
 /* Navbar styling */
 .custom-navbar {
-    background-color: rgba(0, 0, 0, 0.615); 
+    background-color: rgba(0, 0, 0, 0.511);
     -webkit-backdrop-filter: blur(25px); /* Safari-specific prefix */
     backdrop-filter: blur(35px);
-    padding: 8px 1px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    border-bottom: 1px solid rgba(80, 80, 80, 0.326);
+    padding: 8px 0; /* Padding for top/bottom */
     position: fixed;
-    top: 0;
-    width: 100%;
+    top: 8px; /* Position lower from the top */
+    left: 50%; /* Center the navbar */
+    transform: translateX(-50%); /* Offset to center */
+    width: calc(100% - 40px); /* Full width minus margins */
+    max-width: 380px; /* Set a maximum width */
+    margin: 20 20px; /* Add margin to create space on both sides */
     z-index: 9999; /* High z-index */
+    border-radius: 100px; /* Optional: round the corners */
+    border: 1px solid rgba(53, 53, 53, 0.5); /* Stroke line around the navbar */
+   box-shadow: 0 -2px 60px 5px rgb(0, 0, 0.4); /* Stronger, higher shadow */
 }
 
 
