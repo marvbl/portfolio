@@ -1,0 +1,772 @@
+/* Navbar styling */
+.custom-navbar {
+    background-color: rgba(0, 0, 0, 0.615); 
+    -webkit-backdrop-filter: blur(25px); /* Safari-specific prefix */
+    backdrop-filter: blur(35px);
+    padding: 8px 1px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid rgba(80, 80, 80, 0.326);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999; /* High z-index */
+}
+
+
+
+/* Hide default Slick arrows */
+.slick-prev:before,
+.slick-next:before {
+    display: none; /* Hides the default arrow icons */
+}
+
+.single-item {
+    width: 100%; /* Ensure the carousel takes the full width of the container */
+    max-width: 350px; /* Adjust max-width for larger screens */
+    margin: 0 auto; /* Center the carousel */
+    padding: 0; /* Add padding to ensure space around the carousel */
+    margin-top: 50px;
+    position: relative; /* Set relative positioning for the arrows */
+    border-radius: 0px; /* Set the same corner radius as the images */
+    overflow: hidden; /* Ensure the border-radius is visible for the children */
+    background: rgb(0, 0, 0); /* Set a background color for visibility */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional: add a slight shadow for depth */
+    display: flex; /* Ensures the slides are in a row */
+    justify-content: center; /* Center aligns the slides */
+}
+
+.single-item div {
+    margin-right: 5px;
+    margin-left: 2px;
+}
+
+.single-item img {
+    width: 100%; /* Ensure the images fill the width */
+    height: 100%; /* Ensure the images fill the height */
+    object-fit: cover; /* Maintain aspect ratio while filling the container */
+    border-radius: 20px; /* Rounded corners for images */
+    transition: transform 0.3s ease-in-out; /* Smooth transition effect */
+}
+
+/* On hover, the image gets smaller */
+.single-item img:hover {
+    transform: scale(0.97); /* Shrink the image to 95% of its original size */
+}
+
+
+
+/* Style the arrows */
+.slick-prev, .slick-next {
+    position: absolute; /* Position arrows absolutely within the carousel */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Adjust to center vertically */
+    z-index: 1; /* Ensure arrows stay on top of the images */
+    background: transparent; /* Make background transparent */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    cursor: pointer; /* Change cursor to pointer */
+}
+
+/* Customize arrow images */
+.slick-prev img,
+.slick-next img {
+    width: 30px; /* Set the width of the arrows */
+    height: auto; /* Maintain aspect ratio */
+    transition: transform 0.15s ease-in-out, opacity 0.15s ease-in-out; /* Smoother transition for size and opacity */
+    opacity: 1;
+    /* Intensify shadow under the arrow images */
+    box-shadow: 0 0px 30px rgba(0, 0, 0, 0.9), 0 0px 60px rgba(0, 0, 0, 0.2); /* Creates a more intense shadow */
+}
+
+
+/* Hover effect for arrows */
+.slick-prev:hover img,
+.slick-next:hover img {
+    transform: scale(0.95); /* Scale down to 80% of the original size */
+    opacity: 0.9; /* Change opacity to 50% */
+}
+
+
+
+/* Positioning of the arrows */
+.slick-prev {
+    left: -10px; /* Position the previous arrow */
+}
+
+.slick-next {
+    right: 10px; /* Position the next arrow */
+}
+
+/* Ensure arrows have hover effects */
+.slick-prev:hover, .slick-next:hover {
+    opacity: 1; /* Fully visible on hover */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .single-item {
+        max-width: 300px; /* Ensure more room on smaller screens */
+        padding: 0; /* Reduce padding for mobile */
+    }
+
+    /* Adjust arrow size for smaller screens */
+    .slick-prev img, .slick-next img {
+        width: 35px; 
+    }
+
+    
+}
+
+
+
+
+
+
+
+/* Dots */
+.slick-dotted.slick-slider {
+    margin-bottom: 30px; /* Space between slider and dots */
+}
+
+.slick-dots {
+    position: absolute; /* Position dots absolutely */
+    bottom: 40px; /* Adjust this value to position above the thumbnail */
+    display: block;
+    width: 100%; /* Full width */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+    list-style: none; /* Remove default list styles */
+    text-align: center; /* Center align dots */
+    z-index: 1000; /* Ensure dots are above other elements */
+}
+
+.slick-dots li {
+    position: relative; /* Position relative for individual dots */
+    display: inline-block; /* Display dots inline */
+    width: 20px; /* Width of each dot */
+    height: 20px; /* Height of each dot */
+    margin: 0 1px; /* Spacing between dots */
+    padding: 0; /* Remove padding */
+    cursor: pointer; /* Change cursor to pointer */
+}
+
+.slick-dots li button {
+    font-size: 0; /* Hide text size */
+    line-height: 0; /* Hide line height */
+    display: block; /* Block display */
+    width: 20px; /* Button width */
+    height: 20px; /* Button height */
+    padding: 5px; /* Padding inside button */
+    cursor: pointer; /* Change cursor to pointer */
+    color: transparent; /* Hide button color */
+    border: 0; /* Remove border */
+    outline: none; /* Remove outline */
+    background: transparent; /* Transparent background */
+}
+
+.slick-dots li button:hover,
+.slick-dots li button:focus {
+    outline: none; /* Remove outline on focus */
+}
+
+.slick-dots li button:hover:before,
+.slick-dots li button:focus:before {
+    opacity: 1; /* Show dot on hover/focus */
+}
+
+.slick-dots li button:before {
+    content: '•'; /* Dot character */
+    font-family: 'slick'; /* Font for the dots */
+    font-size: 16px; /* Adjust dot size */
+    line-height: 20px; /* Center align dots vertically */
+    position: absolute; /* Position absolutely */
+    top: 0; /* Align at the top */
+    left: 0; /* Align at the left */
+    width: 20px; /* Width of the dot */
+    height: 20px; /* Height of the dot */
+    opacity: 0.5; /* Initial opacity */
+    color: white; /* Dot color */
+    -webkit-font-smoothing: antialiased; /* Smoothing for better appearance */
+    -moz-osx-font-smoothing: grayscale; /* Smoothing for better appearance */
+}
+
+.slick-dots li.slick-active button:before {
+    opacity: 1; /* Fully visible for active dot */
+    color: white; /* Active dot color */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Placeholder for round profile picture */
+.profile-placeholder {
+    width: 35px;
+    height: 35px;
+    background-color: #555; /* Gray placeholder */
+    border-radius: 50%; /* Make it round */
+    transition: opacity 0.3s ease-in-out; /* Smooth transition */
+}
+
+.profile-placeholder:hover {
+    opacity: 1; /* 50% transparency on hover */
+}
+
+/* Real image for CV download icon */
+.cv-icon {
+    width: 37px; /* Size of the CV icon */
+    height: auto; /* Maintain aspect ratio */
+    margin-left: -7px; /* Reduced space between profile picture and icon */
+    transition: opacity 0.3s ease-in-out;
+    margin-top: -2px; /* Fine-tune vertical alignment */
+}
+
+.cv-icon:hover {
+    opacity: 0.5; /* 50% transparency on hover */
+}
+
+
+/* Page body and content styling */
+body {
+    background-color: #000000;
+    font-family: 'Red Hat Display', sans-serif;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Main content styling */
+.main-content {
+    margin-top: 80px; /* Add space to avoid overlapping with fixed navbar */
+}
+
+h1 {
+    font-family: 'Red Hat Display', sans-serif; /* Explicitly set font family for h1 */
+    color: #ffffff;
+    font-size: 2.3rem; /* Heading size */
+    font-weight: 700;
+    text-align: center;
+    margin-top: 100px; /* Adjust this value as needed */
+    
+}
+
+
+
+
+
+
+.divider {
+    width: 100%;        /* Full width */
+    height: 1px;       /* Thickness of the line */
+    background-color: rgba(80, 80, 80, 0.326);
+    margin-top: 60px;
+    margin-bottom: 0px;
+}
+
+
+
+
+
+
+
+.education-wrapper {
+    display: flex; /* Use flexbox for horizontal layout */
+    justify-content: space-between; /* Space between education and work experience sections */
+    margin: 0 auto; /* Center the wrapper horizontally */
+    max-width: 800px; /* Set max width for the wrapper */
+    padding: 0 20px; /* Add padding on left and right */
+}
+
+
+.education-section {
+    text-align: left; /* Align text to the left */
+    margin-top: 0px; /* Space above the education section */
+    padding: 20px 0px; /* Padding around the section: top/bottom 20px, left/right 0px */
+    margin-left: 60px;
+}
+
+.work-experience-section {
+    text-align: left; /* Align text to the left */
+    margin-top: 0px;
+    padding: 20px 0px; /* Padding around the section: top/bottom 20px, left/right 0px */
+    padding-right: 20px;
+    margin-left: 60px; /* Shift work experience section 30px to the right */
+}
+
+
+.education-title {
+    font-family: 'Red Hat Display', sans-serif; /* Set font for the title */
+    font-weight: 700; /* Bold text */
+    color: #525252; /* Text color */
+    margin-bottom: 0px; /* Space below the title */
+    letter-spacing: 2px;
+    font-size: 11px;
+}
+
+.education-content {
+    display: flex; /* Use flexbox for horizontal layout */
+    align-items: center; /* Center vertically */
+    justify-content: flex-start; /* Align items to the start (left) */
+    margin-top: 0px; /* Space above the content */
+}
+
+
+.education-content2 {
+    display: flex; /* Use flexbox for horizontal layout */
+    align-items: center; /* Center vertically */
+    justify-content: flex-start; /* Align items to the start (left) */
+    margin-top: -17px; /* Space above the content */
+}
+
+.education-image {
+    width: 75px; /* Set width of the image */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 30px; /* Space between image and text */
+    margin-left: -2px;
+}
+
+.education-image2 {
+    width: 85px; /* Set width of the image */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 15px; /* Space between image and text */
+    margin-left: 4px;
+}
+
+.education-text {
+    color: #C7C7C7; /* Text color */
+    font-size: 14px; /* Set font size */
+    max-width: 400px; /* Optional: limit text width */
+    margin-top: 15px;
+}
+
+.education-text2 {
+    color: #C7C7C7; /* Text color */
+    font-size: 14px; /* Set font size */
+    max-width: 400px; /* Optional: limit text width */
+    margin-top: 15px;
+}
+
+
+.education-wrapper {
+    display: flex; /* Use flexbox for horizontal layout */
+    justify-content: space-between; /* Space between education and work experience sections */
+    margin: 0 auto; /* Center the wrapper horizontally */
+    max-width: 800px; /* Set max width for the wrapper */
+}
+
+.education-section,
+.work-experience-section {
+    flex: 1; /* Allow sections to grow equally */
+}
+
+.work-experience-title {
+    font-family: 'Red Hat Display', sans-serif; /* Set font for the title */
+    font-weight: 700; /* Bold text */
+    color: #525252; /* Text color */
+    margin-bottom: 0px; /* Space below the title */
+    letter-spacing: 2px;
+    font-size: 11px;
+    margin-left: 90px;
+}
+
+.work-experience-content,
+.work-experience-content2 {
+    display: flex; /* Use flexbox for horizontal layout */
+    align-items: center; /* Center vertically */
+    justify-content: flex-start; /* Align items to the start (left) */
+    margin-top: -5px; /* Space above the content */
+    margin-left: 90px;
+}
+
+.work-experience-image,
+.work-experience-image2 {
+    width: 80px; /* Set width of the image */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 10px; /* Space between image and text */
+    margin-left: -5px;
+}
+
+.work-experience-text,
+.work-experience-text2 {
+    color: #C7C7C7; /* Text color */
+    font-size: 14px; /* Set font size */
+    max-width: 400px; /* Optional: limit text width */
+    margin-top: 15px;
+}
+
+
+
+
+
+
+
+
+
+/* Media Query for Responsive Design */
+@media (max-width: 768px) {
+    .education-wrapper, .education-section {
+        flex-direction: column; /* Stack sections vertically */
+    }
+    .work-experience-content,
+.work-experience-content2, .work-experience-title {
+    margin-left: 0px;
+}
+.who-i-am-wrapper {
+    flex-direction: column; /* Stack the text vertically on small screens */
+}
+
+.who-i-am-section {
+    margin-left: 0px;
+}
+
+.footer-link, .footer-img {
+    display: block; /* Stack links and images vertically */
+    margin-bottom: 15px; /* Space between stacked items */
+}
+
+.who-i-am-wrapper {
+    max-width: 800px !important; /* Add !important to force the rule */
+    padding: 0 72px !important; /* Add !important to force the rule */
+}
+
+.who-i-am-text {
+    color: #C7C7C7;
+    font-size: 16px !important;
+}
+
+.work-experience-text,
+.work-experience-text2 {
+    font-size: 15px; /* Set font size */
+}
+
+.education-text {
+    font-size: 15px; /* Set font size */
+}
+
+.education-text2 {
+    font-size: 15px; /* Set font size */
+}
+
+}
+
+
+
+
+@media (max-width: 600px) {
+    
+    h1 {
+        font-size: 2rem; /* Heading size */
+    }
+
+}
+
+
+
+@media (max-width: 456px) {
+  
+    .work-experience-section {
+        margin-left: 20px; /* Shift work experience section 30px to the right */
+    }
+
+    .education-section {
+        margin-left: 20px;
+    }
+
+    .who-i-am-wrapper {
+        max-width: 800px !important; /* Add !important to force the rule */
+        padding: 0 34px !important; /* Add !important to force the rule */
+    }
+
+
+    h1 {
+        font-size: 1.7rem; /* Heading size */
+    }
+
+
+
+}
+
+
+
+
+
+
+
+
+/* Who I Am Wrapper */
+.who-i-am-wrapper {
+    display: block;
+    justify-content: flex-start; /* Align items to the start */
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 0 80px; /* Padding left and right */
+}
+
+/* Who I Am Section */
+.who-i-am-section {
+    text-align: left;
+    margin-top: -5px; /* Space above the Who I Am section */
+    padding: 20px 0; /* Padding top and bottom */
+    margin-left: 10px;
+}
+
+/* Title styling for Who I Am */
+.who-i-am-title {
+    font-family: 'Red Hat Display', sans-serif; /* Set font for the title */
+    font-weight: 700; /* Bold text */
+    color: #525252; /* Text color */
+    margin-bottom: 0px; /* Space below the title */
+    letter-spacing: 2px;
+    font-size: 11px;
+}
+
+/* Content styling for Who I Am */
+.who-i-am-content {
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 5px;
+}
+
+/* Text styling for Who I Am */
+.who-i-am-text {
+    color: #C7C7C7;
+    font-size: 15px;
+    max-width: 650px; /* Adjust the max width for longer text */
+    margin-top: 0px;
+}
+
+
+
+
+
+/* Footer Styling */
+.footer {
+    background-color: #000000; /* Black background */
+    padding: 40px 0; /* Top and bottom padding */
+    text-align: center; /* Center all text */
+    color: #C7C7C7; /* Default text color */
+    margin-top: 80px;
+}
+
+.footer-link {
+    color: #444444;
+    text-decoration: none; /* Remove underline from link */
+    font-size: 12px;
+    margin-bottom: 0px;
+}
+
+.footer-link:hover {
+    opacity: 80%;
+}
+
+.footer p {
+    margin: 0; /* Remove margin for <p> */
+    font-size: 12px; /* Set font size */
+    color: #444444;
+    margin-top: -18px;
+}
+
+
+.footer-img1 {
+    width: 22px; /* Small image size */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 5px; /* Space between images */
+    margin-top: -20px;
+    opacity: 60%;
+}
+
+
+.footer-img2 {
+    width: 20px; /* Small image size */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 5px; /* Space between images */
+    margin-top: -20px;
+    opacity: 60%;
+}
+
+.footer-img1:hover, .footer-img2:hover {
+   opacity:40%;
+}
+
+/* Add a small margin-top for the rows */
+.row.mt-3 {
+    margin-top: 20px; /* Add vertical spacing between rows */
+}
+
+
+a  {
+   color: #000000;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ANIMATION SMOOTH IN */
+
+
+
+
+/* Initial styles before animation */
+.slick-slider, .education-section, .work-experience-section, .divider, .who-i-am-section, .footer{
+    opacity: 0; /* Make everything invisible initially */
+    transform: translateY(20px); /* Slide up effect */
+    visibility: hidden; /* Hide the elements initially */
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out; /* Smooth transition */
+}
+
+/* Animation for fade-in */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px); /* Start slightly lower */
+        visibility: visible; /* Show the element */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* End at the final position */
+        visibility: visible; /* Ensure it stays visible */
+    }
+}
+
+/* Delayed animations */
+.slick-slider {
+    animation: fadeIn 2s ease-in-out 1s forwards; /* Starts after 1 second */
+}
+
+.education-section {
+    animation: fadeIn 2s ease-in-out 2s forwards; /* Starts after 2 seconds */
+}
+
+.work-experience-section {
+    animation: fadeIn 2s ease-in-out 2.7s forwards; /* Starts after 3 seconds */
+}
+
+.divider {
+    animation: fadeIn 2s ease-in-out 2s forwards; /* Divider fades in after 2.5 seconds */
+}
+
+.who-i-am-section {
+    animation: fadeIn 2s ease-in-out 3s forwards; /* Divider fades in after 2.5 seconds */
+}
+
+.footer {
+    animation: fadeIn 2s ease-in-out 3.2s forwards; /* Divider fades in after 2.5 seconds */
+}
+
+
+
+
+
+
+/* LEGAL NOTICE */
+
+/* style.css */
+
+/* General Styles for the Hero Section */
+.hero {
+    padding: 100px 0; /* Vertical padding */
+    background-color: black; /* Background color */
+    color: white; /* Text color */
+}
+
+/* Content Wrapper for Centering */
+.content-wrapper {
+    max-width: 800px; /* Set max width for better readability */
+    margin: 0 auto; /* Center the wrapper */
+    padding: 0 40px; /* Add horizontal padding */
+}
+
+/* Heading Styles */
+.hero-heading {
+    font-family: 'Red Hat Display', sans-serif; /* Use the same font */
+    font-size: 2.5rem; /* Heading size */
+    margin-bottom: 20px; /* Space below the heading */
+    text-align: left; /* Align text to the left */
+    font-weight: 700;
+}
+
+/* Text Styles */
+.hero-text {
+    font-family: 'Red Hat Display', sans-serif; /* Use the same font */
+    font-size: 15px; /* Text size */
+    line-height: 1.5; /* Improve line spacing */
+    text-align: left; /* Align text to the left */
+    color: #C7C7C7;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero-heading {
+        font-size: 2rem; /* Smaller size for mobile */
+    }
+
+    .hero-text {
+        font-size: 14px; /* Smaller size for mobile */
+    }
+}
+
+
+
+
+
+
+
+/* Footer Styling */
+.footer_legal {
+    background-color: #000000; /* Black background */
+    padding: 40px 0; /* Top and bottom padding */
+    text-align: center; /* Center all text */
+    color: #C7C7C7; /* Default text color */
+    margin-top: 240px;
+}
+
+.footer_legal-link {
+    color: #6F6F6F; /* Light gray text color */
+    text-decoration: none; /* Remove underline from link */
+    font-size: 12px;
+    margin-bottom: 0px;
+}
+
+.footer_legal-link:hover {
+    color: rgb(76, 76, 76); /* White on hover */
+}
+
+.footer_legal p {
+    margin: 0; /* Remove margin for <p> */
+    font-size: 12px; /* Set font size */
+    color: #444444;
+    margin-top: -18px;
+}
+
+/* Add a small margin-top for the rows */
+.row.mt-3 {
+    margin-top: 20px; /* Add vertical spacing between rows */
+}
