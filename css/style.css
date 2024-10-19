@@ -716,7 +716,7 @@ a  {
 /* Text Styles */
 .hero-text {
     font-family: 'Red Hat Display', sans-serif; /* Use the same font */
-    font-size: 15px; /* Text size */
+    font-size: 16px; /* Text size */
     line-height: 1.5; /* Improve line spacing */
     text-align: left; /* Align text to the left */
     color: #C7C7C7;
