@@ -14,10 +14,10 @@
     z-index: 9999; /* High z-index */
     border-radius: 100px; /* Optional: round the corners */
     /* border: 1px solid rgba(53, 53, 53, 0.5); /* Stroke line around the navbar */
-   box-shadow: 0 -160px 90px 170px rgb(0, 0, 0); /* Stronger, higher shadow */
+   box-shadow: 0 -4px 60px 5px rgb(0, 0, 0.7); /* Stronger, higher shadow */
    border-bottom: 1px solid rgba(103, 103, 103, 0.326);
    border-top: 1px solid rgba(73, 73, 73, 0.326);
-   border-left: 1px solid rgba(111, 111, 111, 0.326);
+   border-left:1px solid rgba(100, 100, 100, 0.326);
    border-right: 1px solid rgba(80, 80, 80, 0.326);
    transition: all 0.4s ease; /* Smooth transition */
 }
