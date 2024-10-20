@@ -1,6 +1,6 @@
 /* Navbar styling */
 .custom-navbar {
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.7);
     -webkit-backdrop-filter: blur(25px); /* Safari-specific prefix */
     backdrop-filter: blur(35px);
     padding: 10px 0px; /* Padding for top/bottom */
