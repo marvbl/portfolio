@@ -490,6 +490,24 @@ h1 {
         font-size: 2rem; /* Heading size */
     }
 
+
+    .profile-placeholder {
+        width: 45px;
+        height: 45px;
+        background-color: #555; /* Gray placeholder */
+        border-radius: 50%; /* Make it round */
+        transition: opacity 0.3s ease-in-out; /* Smooth transition */
+    }
+    
+    /* Real image for CV download icon */
+    .cv-icon {
+        width: 40px; /* Size of the CV icon */
+        height: auto; /* Maintain aspect ratio */
+        margin-left: -2px; /* Reduced space between profile picture and icon */
+        transition: opacity 0.3s ease-in-out;
+        margin-top: -2px; /* Fine-tune vertical alignment */
+    }
+    
 }
 
 
