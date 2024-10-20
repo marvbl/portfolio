@@ -16,14 +16,15 @@
     /* border: 1px solid rgba(53, 53, 53, 0.5); /* Stroke line around the navbar */
    box-shadow: 0 -4px 60px 5px rgb(0, 0, 0.7); /* Stronger, higher shadow */
    border-bottom: 1px solid rgba(103, 103, 103, 0.326);
-   border-right: 1px solid rgba(130, 130, 130, 0.326);
-   border-left: 1px solid rgba(80, 80, 80, 0.326);
+   border-left: 1px solid rgba(130, 130, 130, 0.326);
+   border-right: 1px solid rgba(80, 80, 80, 0.326);
    transition: all 0.4s ease; /* Smooth transition */
 }
 
 .custom-navbar:hover {
     transform: translateX(-50%) scale(1.02); /* Scale on hover */
 }
+
 
 
 
