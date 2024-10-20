@@ -486,8 +486,9 @@ h1 {
 
 @media (max-width: 600px) {
     
-    h1 {
+     h1 {
         font-size: 2rem; /* Heading size */
+        margin-top: 115px; /* Adjust this value as needed */
     }
 
 
