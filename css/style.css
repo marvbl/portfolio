@@ -225,15 +225,15 @@
 
 /* Placeholder for round profile picture */
 .profile-placeholder {
-    width: 35px;
-    height: 35px;
+    width: 37px;
+    height: 37px;
     background-color: #555; /* Gray placeholder */
     border-radius: 50%; /* Make it round */
     transition: opacity 0.3s ease-in-out; /* Smooth transition */
 }
 
 .profile-placeholder:hover {
-    opacity: 1; /* 50% transparency on hover */
+    opacity: 0.7; /* 50% transparency on hover */
 }
 
 /* Real image for CV download icon */
