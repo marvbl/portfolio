@@ -288,10 +288,10 @@ h1 {
 
 .divider {
     width: 100%;        /* Full width */
-    height: 1px;       /* Thickness of the line */
-    background-color: rgba(80, 80, 80, 0.326);
+    height: 0.5px;        /* Thickness of the line */
+    background: linear-gradient(to right, black, rgb(106, 106, 106), black);  /* Gradient from black to white to black */
     margin-top: 60px;
-    margin-bottom: 0px;
+    margin-bottom: 10px;
 }
 
 
