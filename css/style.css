@@ -28,6 +28,18 @@
 
 
 
+/* Fixed black line at the top of the page */
+/* Add shadow below the border */
+.top-border {
+    position: fixed;
+    top: 0; /* Set it at the very top of the page */
+    left: 0;
+    width: 100%;
+    height: 5px; /* Thickness of the line */
+    background-color: black; /* Black color */
+    z-index: 9998; /* Below the navbar, but above the content */
+    box-shadow: 0 0px 15px 20px rgb(0, 0, 0.7); /* Stronger, higher shadow */
+}
 
 
 /* Hide default Slick arrows */
